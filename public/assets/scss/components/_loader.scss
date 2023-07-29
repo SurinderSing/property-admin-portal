@@ -1,0 +1,50 @@
+/**=====================
+    loader css start
+==========================**/
+.loader-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+
+    &.img-gif {
+        overflow: hidden;
+        img {
+            width: 120px;
+        }
+    }
+}
+
+.loader-text {
+    text-align: center;
+    img {
+        height: 150px;
+      }
+    h3 {
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-weight: 500;
+        padding: 0 15px;
+    }
+}
+
+.loader-img {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    img {
+        height: 150px;
+    }
+}
+
+/**=====================
+    loader css end
+==========================**/

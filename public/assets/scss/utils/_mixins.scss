@@ -1,0 +1,35 @@
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%background-common {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%gradient-text1 {
+    background: var(--theme-gradient2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%comman-before-line {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+}
+
+%common-lightafter {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

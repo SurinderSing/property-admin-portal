@@ -1,0 +1,364 @@
+/**=====================
+     slick css start
+==========================**/
+.slick-initialized {
+    .slick-slide {
+        margin-bottom: -6px;
+        &:focus {
+            outline: none;
+        }
+        > div {
+            &:focus {
+                outline: none;
+            }
+            > div {
+                &:focus {
+                    outline: none;
+                }
+                a {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        z-index: 1;
+    }
+}
+.slick-between {
+    .slick-slider {
+        .slick-list {
+            margin: 0 -25px;
+            .slick-track {
+                .slick-slide {
+                    > div {
+                        margin: 0 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-shadow {
+    .slick-list {
+        margin-bottom: -30px !important;
+        .slick-track {
+            .slick-slide {
+                margin-bottom: 0;
+                > div {
+                    margin-bottom: 30px !important;
+                }
+            }
+        }
+    }
+}
+.feature-slider, .grid-slider, .slider-for, .main-property-slider {
+    .slick-slide {
+        margin-bottom: -5px;
+    }
+    .slick-arrow {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        transition: 0.5s;
+        &:before {
+            font-family: $font-awesome;
+            font-weight: 900;
+            font-size: 14px;
+            opacity: 1;
+        }
+        &:hover {
+            background-color: rgba($black, 0.2);
+            transition: 0.5s;
+        }
+    }
+    .slick-prev {
+        &:before {
+            content: "\f060";
+        }
+    }
+    .slick-next {
+        &:before {
+            content: "\f061";
+        }
+    }
+}
+.arrow-light {
+    .slick-arrow {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: rgba($white, 0.1);
+    }
+    .slick-prev, .slick-next {
+        &:before {
+            font-family: $font-awesome;
+            font-weight: 900;
+            font-size: 14px;
+            margin-left: 1px;
+        }
+    }
+    .slick-prev {
+        left: -75px;
+        &:before {
+            content: "\f053";
+        }
+    }
+    .slick-next {
+        right: -75px;
+        &:before {
+            content: "\f054";
+        }
+    }
+}
+.dot-gradient {
+    margin-bottom: 25px !important;
+    .slick-dots {
+        position: relative;
+        li {
+            button {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                transition: 0.5s;
+                &::before {
+                    background-image: var(--theme-gradient3);
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0.3;
+                    left: 5px;
+                    top: 5px;
+                    border-radius: 100%;
+                    color: transparent;
+                    transition: 0.5s;
+                }
+            }
+            &.slick-active {
+                button {
+                    position: relative;
+                    transition: 0.5s;
+                    &::before {
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                    &::after {
+                        @extend %common-lightafter;
+                        background-color: var(--theme-default);
+                        opacity: 0.2;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.modern-dot {
+    &.slick-dotted {
+        margin-bottom: 3px;
+    }
+    &.property-3 {
+        &.slick-dotted {
+            margin-bottom: 2px;
+        }
+    }
+    .slick-dots {
+        position: relative;
+        bottom: unset;
+        margin-top: 40px;
+        @extend %flex-center;
+        li {
+            width: auto;
+            height: auto;
+            button {
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                opacity: 0.5;
+                background-color: var(--theme-default);
+                &::before {
+                    display: none;
+                }
+            }        
+
+            &.slick-active {
+                button {
+                    opacity: 1;
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+.arrow-image {
+    .slick-arrow {
+        width: 100px;
+        height: 100px;
+        @extend %background-common;
+        border-radius: 100%;
+        box-shadow: 0 0 75px rgba($black, 0.08);
+        &::before {
+            font-family: $font-awesome;
+            font-weight: 900;
+            font-size: 18px;
+            color: var(--theme-default);
+            position: relative;
+            z-index: 1;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: $white;
+            border-radius: 100%;
+            top: 15px;
+            left: 15px;
+        }
+       .slick-thumb-nav {
+            &::after {
+                position: absolute;
+                content: '';
+                width: 70px;
+                height: 70px;
+                background: $white;
+                border-radius: 100%;
+                top: 15px;
+                left: 15px;
+            }
+       }
+    }
+    .slick-next {
+        &::before {
+            content: "\f061";
+        }
+    }
+    .slick-prev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            content: "\f060";
+        }
+    }
+    &.main-property-slider {
+        .slick-arrow {
+            width: 40px;
+            height: 40px;
+            background: $white;
+            &::after {
+                width: 60px;
+                height: 60px;
+                background-color: rgba($white, 0.3);
+                top: -10px;
+                left: -10px;
+                animation: heartbit 2s ease-out;
+                animation-iteration-count: infinite;
+            }
+            &::before {
+                color: var(--theme-default);
+                font-size: 16px;
+            }
+        }
+    }
+}
+// brand slider css
+.logo-box {
+    display: inline-block;
+    a {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    img {
+        margin: 0 auto;
+    }
+}
+.arrow-gradient {
+    position: relative;
+    .slick-arrow {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        border-radius: 5px;
+        transition: 0.5s;
+        &::before {
+            font-size: 16px;
+            font-family: $font-awesome;
+            font-weight: 900;
+            opacity: 1;
+            color: var(--theme-default);
+            transition: 0.5s;
+            display: block;
+            margin-top: 1px;
+        }
+        &::after {
+            @extend %common-lightafter;
+            background-color: var(--theme-default);
+            border-radius: 5px;
+            opacity: 0.15;
+            transition: 0.5s;
+        }
+        &:hover, &:focus {
+            background-image: var(--theme-gradient2);
+            transition: 0.5s;
+            &::before { 
+                color: $white;
+                transition: 0.5s;
+            }
+            &::after { 
+                @extend %common-lightafter;
+                opacity: 0.3;
+                box-shadow: -5.15px 8.572px 25px var(--theme-default2);
+                transition: 0.5s;
+                z-index: -1;
+            }
+        }
+    }
+    .slick-prev {
+        &::before {
+            content: "\f060";
+        }
+    }
+    .slick-next {
+        &::before {
+            content: "\f061";
+        }
+    }
+    &.arrow-right {
+        .slick-arrow {
+            top: -89px;
+        }
+        .slick-prev {
+            right: 58px;
+            left: unset;
+            &::after {
+                opacity: 0.2;
+            }
+        }
+        .slick-next {
+            right: 0px;
+        }
+    }
+}
+.brand-slider {
+    margin-bottom: -1px;
+    .slick-list {
+        .slick-track {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+        .slick-slide {
+            > div {
+                > div {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/**=====================
+     slick css end
+==========================**/

@@ -1,0 +1,242 @@
+/**=====================
+     buttons css start
+==========================**/
+.btn {
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 8px 30px 7px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+
+    &.btn-sm {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    &.btn-solid {
+        background: var(--theme-default);
+        border: 2px solid transparent;
+        color: $white;
+        &::after {
+            @extend %common-lightafter;
+            transition: 0.5s;
+            box-shadow: 0px 4px 20.5px 3px var(--theme-default);
+            opacity: 0.3;
+        }
+        &:hover {
+            background: $white;
+            border: 2px solid var(--theme-default);
+            color: var(--theme-default);
+
+            &::after {
+                box-shadow: unset;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    &.btn-gradient {
+        color: $white;
+        background-size: 200% auto;
+        transition: all 0.5s ease;
+        border: 2px solid transparent;
+        background-image: var(--theme-gradient1);
+        &::after {
+            @extend %common-lightafter;
+            opacity: 0;
+            border-radius: 4px;
+        }
+
+        &::after {
+            opacity: 0.25;
+            box-shadow: 3.346px 3.716px 12.5px var(--theme-default2);
+        }
+
+        &:hover {
+            background-position: right center;
+            color: $white !important;
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            background-image: var(--theme-gradient1);
+        }
+
+
+
+        &.btn-pill {
+            &::after {
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &.btn-light-bg {
+        background-color: transparent;
+        border: 2px solid transparent;
+        color: var(--theme-default);
+        transition: all 0.5s ease;
+        height: 43px;
+        &::after {
+            @extend %common-lightafter;
+            background-color: var(--theme-default);
+            opacity: 0.1;
+        }
+        span {
+            background: var(--theme-gradient2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            vertical-align: -2px;
+        }
+        &:hover {
+            background: $white;
+            height: 43px;
+            transition: all 0.5s ease;           
+            &::after {
+                background: $white;
+            }
+        }
+
+        &.btn-flat{
+          &:hover{
+            transition: all 0.5s ease;
+            border-bottom: 2px solid var(--theme-default);
+            opacity: 1;
+            box-shadow: 0px 6px 12px -4px var(--theme-default);
+          }
+        }
+    }
+
+    &.btn-white {
+        background-color: $white;
+        border: 2px solid transparent;
+        transition: all 0.5s ease;
+        span {
+            @extend %gradient-text1;
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            box-shadow: 0 4px 6px 2px rgba($black, 0.1);
+            transition: all 0.5s ease;
+        }
+    }
+
+    &.btn-dashed {
+        border: 1px dashed $gray-30;
+        color: $theme-font-color;
+        background: transparent;
+        transition: all 0.5s ease;
+        position: relative;
+        padding: 9px 30px 8px;
+
+        &:hover {
+            background: $gray-30;
+            color: $white;
+            transition: all 0.5s ease;
+            background-color: transparent;
+            border-color: var(--theme-default2);
+            color: var(--theme-default2);
+
+            &::after {
+                opacity: 0.1;
+                @extend %common-lightafter;
+                background: var(--theme-default2);
+            }
+        }
+    }
+
+    &.btn-pill {
+        border-radius: 30px;
+        &:hover {
+            &::after {
+                border-radius: 30px;
+            }
+        }
+        &::after {
+            border-radius: 30px;
+        }
+    }
+
+    &.btn-flat {
+        border-radius: 0;
+    }
+
+    &.btn-lg {
+        padding: 12px 30px 10px;
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+.btns {
+    margin-bottom: -10px;
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+
+.theme-buttons {
+    margin-bottom: -15px;
+
+    >div {
+        margin-left: -15px;
+
+        .btn {
+            margin-bottom: 15px;
+
+            +.btn {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+.btn-outline-light {
+    color: $theme-sub-font-color;
+}
+
+.btn-showcase {
+    .theme-card {
+        .card-header {
+            margin-top: -3px;
+        }
+    }
+    .card-body {
+        .btn {
+            margin-bottom: 10px;
+        }
+
+        margin-bottom: -10px;
+    }
+}
+
+.custom-dropdown {
+    position: relative;
+    .custom-dropdown-menu {
+        width: 350px;
+        padding: 20px;
+        right: 0;
+        box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1);
+        background: $white;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        form {
+            .checkbox_animated {
+                ~ span {
+                    vertical-align: -1px;
+                }
+            }
+        }
+        &.show {
+            animation: fadeIn 0.5s;
+            display: block;
+        }
+    }
+}
+
+/**=====================
+     buttons css end
+==========================**/

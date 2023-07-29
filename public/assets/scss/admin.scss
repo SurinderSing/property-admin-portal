@@ -1,0 +1,83 @@
+/*!
+-----------------------------------------------------------------------------------
+Template Name: Sheltos - Real Estate HTML Template
+Template URI: https://themes.pixelstrap.com/sheltos/
+Description: This is Real Estate website
+Author: Pixelstrap
+Author URI: https://themeforest.net/user/pixelstrap
+-----------------------------------------------------------------------------------
+
+1. Bootstrap CSS
+2. Font awesome CSS
+3. Feather icon CSS
+4. Dropzone CSS
+5. Sweetalert2 CSS
+6. Chartist CSS
+7. Template CSS
+    7.1 Reset CSS
+    7.2 Sidebar CSS
+    7.3 Buttons CSS
+	7.4 Label CSS
+    7.5 Buttons CSS
+	7.6 Form CSS
+    7.7 Card CSS
+    7.8 Pagination CSS
+    7.9 Property CSS
+    7.10 Map CSS
+    7.11 Slick CSS
+    7.12 Loader CSS
+    7.13 Customizer CSS
+    7.14 Admin pages CSS
+    7.15 Inner pages CSS
+    
+8. Admin Responsive CSS
+
+
+
+*/
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+//animate css 
+@import '~animate.css/animate.min.css';
+
+// bootstrap 
+@import '~bootstrap/dist/css/bootstrap.css';
+
+// Dropzone css
+@import '~react-dropzone-uploader/dist/styles.css';
+
+// toastify
+@import '~react-toastify/dist/ReactToastify.css';
+
+// vendors
+@import "vendor/font-awesome";
+
+// utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// base
+@import "base/reset";
+
+// layout
+@import "layout/sidebar";
+
+// components
+@import "components/buttons";
+@import "components/labels";
+@import "components/form";
+@import "components/card";
+@import "components/pagination";
+@import "components/property";
+@import "components/map";
+@import "components/slick";
+@import "components/loader";
+@import "components/customizer";
+
+// pages
+@import "pages/admin-pages";
+@import "pages/inner-pages";
+
+// Template
+@import "template/admin-responsive";

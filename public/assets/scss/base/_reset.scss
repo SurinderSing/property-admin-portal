@@ -1,0 +1,599 @@
+/**=====================
+     Reset css start
+==========================**/
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+.media-body {
+  flex: 1;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+label {
+  margin-bottom: 0.5rem;
+}
+
+body.rtl {
+  #slider-range1 {
+    direction: ltr;
+  }
+}
+
+/*====== Padding css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Padding css ends ======*/
+
+/*====== Padding-left css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .p-l-#{$i} {
+    padding-left: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Padding-left css ends ======*/
+
+/*====== Padding-top css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .p-t-#{$i} {
+    padding-top: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Padding-top css ends ======*/
+
+/*====== Padding-bottom css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .p-b-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Padding-bottom css ends ======*/
+
+/*====== Padding-right css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .p-r-#{$i} {
+    padding-right: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Padding-right css ends ======*/
+
+/*====== Margin css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Margin css ends ======*/
+
+/*====== Margin-top css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .m-t-#{$i} {
+    margin-top: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Margin-top css ends ======*/
+
+/*====== Margin-Bottom css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .m-b-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Margin-Bottom css ends ======*/
+
+/*====== Margin-left css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .m-l-#{$i} {
+    margin-left: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Margin-left css ends ======*/
+
+/*====== Margin-right css starts ======*/
+$i: 0;
+@while $i<=50 {
+  .m-r-#{$i} {
+    margin-right: #{$i}px;
+  }
+  $i: $i + 5;
+}
+/*====== Margin-right css ends ======*/
+
+/*====== Image-sizes css starts ======*/
+$i: 10;
+@while $i<=100 {
+  .img-#{$i} {
+    width: #{$i}px;
+  }
+  $i: $i + 10;
+}
+/*====== Image-sizes css ends ======*/
+
+/*====== font family css starts ======*/
+.font-roboto {
+  font-family: $font_1, $font_3;
+}
+.font-rubik {
+  font-family: $font_2, $font_3;
+}
+/*====== font family css end ======*/
+
+/*====== image ratio css starts ======*/
+.ratio_36 {
+  .bg-size {
+    &:before {
+      padding-top: 36%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_40 {
+  .bg-size {
+    &:before {
+      padding-top: 40%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_45 {
+  .bg-size {
+    &:before {
+      padding-top: 45%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio2_1 {
+  .bg-size {
+    &:before {
+      padding-top: 50%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_55 {
+  .bg-size {
+    &:before {
+      padding-top: 55%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_63 {
+  .bg-size {
+    &:before {
+      padding-top: 63%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_65 {
+  .bg-size {
+    &:before {
+      padding-top: 65%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_70 {
+  .bg-size {
+    &:before {
+      padding-top: 70%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_59 {
+  .bg-size {
+    &:before {
+      padding-top: 59%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio2_3 {
+  .bg-size {
+    &:before {
+      padding-top: 60%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio3_2 {
+  .bg-size {
+    &:before {
+      padding-top: 66.66%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_90 {
+  .bg-size {
+    &:before {
+      padding-top: 93%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_landscape {
+  .bg-size {
+    &:before {
+      padding-top: 75%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_square {
+  .bg-size {
+    &:before {
+      padding-top: 100%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_asos {
+  .bg-size {
+    &:before {
+      padding-top: 127.7777778%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio_portrait {
+  .bg-size {
+    &:before {
+      padding-top: 150%;
+      content: "";
+      display: block;
+    }
+  }
+}
+.ratio1_2 {
+  .bg-size {
+    &:before {
+      padding-top: 200%;
+      content: "";
+      display: block;
+    }
+  }
+}
+/*====== image ratio css ends ======*/
+
+/*====== image ratio class of react ======*/
+.background-style {
+  display: block;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+/*====== image ratio class of react ======*/
+.form-group {
+  .dropdown {
+    .btn-secondary {
+      background: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+/*====== image ratio class of react ======*/
+/*====== Module of react ======*/
+.btn-showcase {
+  .btn {
+    margin: 0 2px 10px 2px;
+  }
+}
+.theme-label {
+  .label {
+    margin: 0 2px 10px 2px;
+  }
+}
+/*====== Module of react ======*/
+
+.feature-image {
+  .zoom-image {
+    z-index: "10";
+    height: "100%";
+    width: "100%";
+  }
+}
+
+.masonry-spacing {
+  margin: -15px -10px;
+  > div {
+    padding: 15px 10px;
+  }
+}
+
+.dropdown {
+  .btn-secondary {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 4px;
+    height: 100%;
+    font-family: Roboto, sans-serif;
+    color: #586167;
+    font-weight: 500;
+    font-size: 16px;
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      color: #586167;
+      box-shadow: none !important;
+      outline: none;
+    }
+    .dropdown-item {
+      white-space: pre-wrap !important;
+    }
+    .fa-angle-down {
+      padding-left: 15px;
+    }
+  }
+}
+
+.adjust-height {
+  width: 88% !important;
+  height: 100% !important;
+}
+
+.image-fit {
+  height: 150px;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.empty-cart {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**=====================
+     Reset css end
+==========================**/
+.suggestion-cart {
+  width: 100%;
+  background-color: #fafafa;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  [class="dark-layout"] & {
+    background-color: $dark-bg3;
+  }
+  &.nav-submenu {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 15px;
+    transition: all 0.6s ease;
+    .media {
+      align-items: center;
+      &:not(:first-child) {
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid $light-border;
+      }
+
+      img {
+        height: 55px;
+        width: 64px;
+        object-fit: cover;
+      }
+      .media-body {
+        margin-left: 10px;
+        text-align: left;
+        [dir="rtl"] & {
+          text-align: right;
+          margin-right: 10px;
+          margin-left: unset;
+        }
+        a {
+          padding: 0;
+          color: var(--theme-default);
+        }
+        h5 {
+          font-size: 11px;
+          font-weight: 600;
+        }
+        span {
+          font-size: 14px;
+          color: $gray-60;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &.open {
+    top: 54px;
+    visibility: visible;
+    opacity: 1;
+  }
+  &.responsive-suggestion {
+    @media only screen and (max-width: 992px) {
+      width: 320px;
+      right: 0;
+      left: unset;
+      [dir="rtl"] & {
+        left: 0;
+        right: unset;
+      }
+      &.open {
+        top: 90px;
+      }
+    }
+  }
+}
+
+.filter-tag-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  .filter-tag {
+    padding: 4px 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #eee;
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: -2px;
+    }
+  }
+}
+
+.skeleton-svg {
+  width: 100%;
+  height: calc(280px + (428 - 280) * ((100vw - 320px) / (1920 - 320)));
+}
+.skeleton-img {
+  width: 100%;
+  height: calc(200px + (350 - 200) * ((100vw - 320px) / (1920 - 320)));
+}
+.skeleton-c1 {
+  width: calc(140px + (200 - 140) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 15px;
+  y: calc(260px + (415 - 260) * ((100vw - 320px) / (1920 - 320)));
+}
+.skeleton-c2 {
+  width: calc(170px + (230 - 170) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 15px;
+  y: calc(242px + (390 - 242) * ((100vw - 320px) / (1920 - 320)));
+}
+.skeleton-c3 {
+  width: calc(100px + (150 - 100) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 15px;
+  y: calc(220px + (365 - 220) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.load-more {
+  display: block;
+  width: 150px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .swiper-pagination-bullet {
+    width: unset !important;
+    height: unset !important;
+    margin: 0 !important;
+    border-radius: 0;
+    opacity: 1;
+    background: var(--theme-default2) !important;
+
+    .fnc-nav__control {
+      position: relative;
+      padding: 8px;
+      color: white;
+      .swiper__control-progress {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+        transition-timing-function: linear !important;
+      }
+    }
+
+    &.swiper-pagination-bullet-active {
+      .fnc-nav__control {
+        color: white;
+        background: black !important;
+        .swiper__control-progress {
+          transform: scaleX(1);
+          transition: transform 5.66667s ease 0s;
+        }
+      }
+    }
+  }
+}
+
+.nav-item {
+  cursor: pointer;
+}
+.Toastify__progress-bar--success{
+  background: $success-color;    
+}
+.Toastify__zoom-enter{
+  svg{
+    fill: $success-color;    
+  }
+}
+.dzu-previewContainer{
+  background-color: $white;
+}

@@ -1,0 +1,1675 @@
+/**=====================
+     responsive css start
+==========================**/
+@media (max-width: 1800px) {
+    .timeline-card {
+        &::after {
+            width: 65%;
+        }
+    }
+}
+
+@media (max-width: 1711px) {
+
+    // dashboard css
+    .properties-list {
+        .media {
+            >img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .media-body {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1711px) and (min-width: 1400px) {
+    .authentication-box {
+        .col-xxl-3 {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .total-container {
+        .apexcharts-canvas {
+            margin: 0 auto;
+        }
+    }
+
+    // 404 page css
+    .not-found-img {
+        .animation-error {
+            right: 100px;
+        }
+    }
+}
+
+@media (max-width: 1660px) {
+    .revenue-container {
+        .apexcharts-canvas {
+            margin: 0 auto;
+        }
+    }
+
+    .recent-properties {
+        table {
+            tr {
+                td {
+                    min-width: 105px;
+
+                    &:first-child {
+                        min-width: 244px;
+                    }
+
+                    &:last-child {
+                        min-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-info {
+        .all-properties {
+            .media {
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1660px) and (min-width: 1200px) {
+    .xl-none {
+        display: none;
+    }
+
+    .xl-2 {
+        flex: 0 0 23%;
+        max-width: 23%;
+    }
+
+    .xl-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .xl-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .xl-index-10 {
+        order: 10;
+    }
+
+    // dashboard css
+    .all-properties {
+        .media {
+            img {
+                width: 16%;
+            }
+        }
+    }
+
+    // profile css
+    .timeline-card {
+        &::after {
+            width: 40%;
+            right: -110px;
+        }
+    }
+
+    .follow-list-item {
+        display: none;
+    }
+
+    .friend-agent {
+        display: none;
+    }
+}
+
+@media (max-width: 1540px) {
+
+    // profile css
+    .timeline-card {
+        &::after {
+            width: 47%;
+        }
+    }
+}
+
+@media (max-width: 1460px) {
+
+    // 404 page css
+    .not-found-img {
+        .animation-error {
+            top: 20px;
+            right: 60px;
+
+            img {
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .all-properties {
+        ul {
+            li img {
+                display: none;
+            }
+        }
+    }
+
+    .payment-table {
+        table {
+            tr {
+                td,
+                th {
+                    &:nth-child(2) {
+                        min-width: 150px !important;
+                    }
+                    &:nth-child(3) {
+                        min-width: 120px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1381px) and (min-width: 1200px) {
+    .large-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .large-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .large-5 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    // dashboard css
+    .all-properties {
+        .media {
+            img {
+                width: 12%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) and (min-width: 1200px) {
+
+    // all users css
+    .user-lists {
+        &.agent-section {
+            .agent-image {
+                .overlay-content {
+                    span {
+                        letter-spacing: 6px;
+                    }
+                }
+            }
+
+            .agent-content {
+                padding: 20px;
+
+                .agent-contact {
+                    li {
+                        .label {
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+
+    // profile css
+    .timeline-card {
+        &::after {
+            width: 50%;
+            right: -108px;
+        }
+    }
+
+    // main header css
+    .page-wrapper {
+        .page-main-header {
+            .header-menu {
+                >li {
+                    &:first-child {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+
+    // dashboard css
+    .assign-table {
+        table {
+            tr {
+                td {
+                    &:first-child {
+                        min-width: 210px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 404 css
+    .page-not-found {
+        .not-found-content {
+            p {
+                width: 90%;
+            }
+        }
+    }
+
+    // wizard css
+    .property-wizard {
+        .wizard-box {
+            .wizard-step-container {
+                .wizard-steps {
+                    li {
+                        .media {
+                            .media-body {
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+
+    // profile css
+    .timeline-card {
+        &::after {
+            right: -90px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .property-details {
+        ul {
+            li {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 34%;
+        }
+    }
+
+    .friend-list {
+        .label {
+            padding: 4px 9px 3px;
+        }
+    }
+
+    .property-section {
+
+        .property-2,
+        .property-3 {
+            .property-box {
+                .property-image {
+                    .labels-left {
+                        left: 15px;
+                        top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    // main header css
+    .page-wrapper {
+        .page-main-header {
+            padding: 0 20px;
+
+            .header-menu {
+                >li {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    // dashboard css
+    .all-properties {
+        .media {
+            img {
+                width: 7%;
+            }
+        }
+    }
+
+    .project-widgets {
+        .media {
+            .widget-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    // property css
+    .property-section {
+        .property-box {
+            .property-details {
+                padding: 20px;
+
+                .property-btn {
+                    .btn {
+                        padding: 8px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .property-details {
+        .property-btn {
+            .btn {
+                +.btn {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+
+    // map css
+    .jvector-map-height {
+        height: 280px;
+    }
+
+    // reports css
+    .transactions-table {
+        table {
+            tr {
+
+                th,
+                td {
+                    &:nth-child(2) {
+                        min-width: 250px;
+                    }
+
+                    &:nth-child(6) {
+                        min-width: 108px;
+                    }
+                }
+            }
+        }
+    }
+
+    // wizard css 
+    .property-wizard {
+        &.horizontal-wizard {
+            .wizard-box {
+                .wizard-step-container {
+                    .wizard-steps {
+                        margin-top: 0;
+
+                        li {
+                            flex: 0 0 48%;
+                            max-width: 48%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 404 page css
+    .not-found-img {
+        .animation-error {
+            img {
+                height: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .timeline-card {
+        &.timeline-agent {
+            &::after {
+                width: 66%;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 15px;
+    }
+
+    .card {
+
+        .card-body,
+        .card-header,
+        .card-footer {
+            padding: 20px;
+        }
+    }
+
+    .onhover-show-div {
+        top: 69px;
+    }
+
+    .column-sm {
+        margin-bottom: -20px;
+
+        >div {
+            margin-bottom: 20px;
+        }
+    }
+
+    .theme-pagination {
+        margin-top: 20px;
+    }
+
+    // form css
+    .admin-form {
+        .dropdown {
+            .dropdown-toggle {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .form-control {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    // main header css
+    .page-wrapper {
+        .page-main-header {
+            height: 70px;
+            margin-left: 0;
+            width: 100%;
+
+            .header-menu {
+                .notification-dropdown {
+                    top: 58px;
+                }
+            }
+        }
+    }
+
+    .page-header {
+        padding: 25px 0;
+    }
+
+    // sidebar css
+    .page-body-wrapper {
+
+        .page-body,
+        footer {
+            margin-left: 0;
+        }
+
+        .page-sidebar {
+            .logo-wrap {
+                padding: 20px;
+            }
+
+            .main-sidebar {
+                .sidebar-menu {
+                    height: calc(100vh - 199px);
+                }
+            }
+        }
+
+        .page-body {
+            min-height: calc(100vh - 70px);
+            margin-top: 70px;
+        }
+    }
+
+    // dashboard css
+    .all-properties {
+        .media {
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    .sales-details {
+        .bar-sales {
+            margin-top: 20px;
+        }
+    }
+
+    // property css
+    .property-admin {
+        .property-details {
+            padding: 20px;
+        }
+    }
+
+    .property-map {
+        .property-grid {
+            padding-top: 30px;
+        }
+    }
+
+    // user profile css
+    .title-about {
+        margin-bottom: 20px;
+    }
+
+    .timeline-card {
+        &::after {
+            width: 30%;
+        }
+    }
+
+    .about-space {
+        margin-top: 20px;
+
+        .off-credit {
+            padding-top: 20px;
+        }
+    }
+
+    .friend-list {
+        .label {
+            padding: 4px 8px 3px;
+        }
+    }
+
+    // all users css
+    .property-grid-3 {
+        .property-grid {
+            &.list-view {
+                .property-box {
+                    .agent-image {
+                        width: 78%;
+                    }
+                }
+            }
+        }
+    }
+
+    .agent-section {
+        .agent-content {
+            padding: 20px;
+        }
+    }
+
+    // reports css
+    .income-wrap {
+        .overview-content {
+            li {
+                +li {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    // login css
+    .authentication-box {
+        position: relative;
+        background: rgba(249, 249, 249, 0.9);
+
+        .auth-img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .log-in {
+            form {
+                .form-group {
+                    .input-group {
+                        .input-group-text {
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .log-in {
+        h6 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            .form-group {
+                margin-bottom: 20px;
+
+                .important-note {
+                    padding-left: 30px;
+                }
+            }
+
+            .d-flex {
+                margin-bottom: 20px;
+            }
+        }
+
+        .social-connect {
+            >div:nth-child(n+3) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    // 404 css
+    .page-not-found {
+        text-align: center;
+
+        .row {
+            >div {
+                margin: 0 auto;
+            }
+        }
+
+        .not-found-img {
+            >img {
+                width: 80%;
+            }
+        }
+
+        .not-found-content {
+            padding: 20px 0;
+            text-align: center;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+    .not-found-img {
+        .animation-error {
+            right: 100px;
+
+            img {
+                height: 90px;
+            }
+        }
+    }
+
+    // wizard css 
+    .property-wizard {
+        &.horizontal-wizard {
+            .wizard-box {
+                .wizard-step-container {
+                    .log-in {
+                        margin-top: 30px;
+
+                        .next-btn {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .btn {
+        padding: 8px 15px 7px;
+
+        &.btn-dashed {
+            padding: 9px 18px 8px;
+        }
+    }
+
+    // login css
+    .authentication-box {
+        .log-in {
+            .important-note {
+                font-size: 13px;
+            }
+        }
+    }
+
+    // footer css
+    footer {
+        text-align: center;
+
+        .float-end {
+            float: none !important;
+        }
+    }
+
+    // tap top css
+    .tap-top {
+        &.top {
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+
+    // main header css
+    .page-wrapper {
+        .page-main-header {
+            .mobile-search {
+                padding: 10px;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    vertical-align: middle;
+                }
+            }
+
+            .search-form {
+                top: 50px;
+                position: absolute;
+                transition: all linear 0.3s;
+                left: 15px;
+                background-color: $white;
+                transform: translateY(-35px) scaleY(0);
+                opacity: 0;
+                visibility: hidden;
+                width: 180px;
+                padding-left: 0;
+
+                .form-control {
+                    border: 1px solid $border-color;
+                    padding: 8px 15px;
+                }
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+
+                &.open {
+                    transform: translateY(0px) scaleY(1);
+                    opacity: 1;
+                    visibility: visible;
+                    transition: all linear 0.3s;
+                }
+            }
+
+            .header-menu {
+                >li {
+                    &:first-child {
+                        width: auto;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // dashboard css
+    .light-box {
+        padding: 12px;
+    }
+
+    .expiring-details {
+        .legend-exiring {
+            margin-top: 60px;
+        }
+    }
+
+    // property css
+    .property-section {
+        .property-box {
+            .property-details {
+                .property-btn {
+                    .btn {
+                        padding: 8px 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .property-details {
+        ul {
+            li {
+                padding-left: 8px;
+                padding-right: 3px;
+            }
+        }
+    }
+
+    // user profile css
+    .about-profile {
+        .friend-list {
+            ul {
+                li {
+                    &:nth-child(n + 4) {
+                        margin-top: 0;
+                    }
+
+                    &:nth-child(n + 5) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 39%;
+        }
+    }
+
+    // invoice css
+    .address-invoice {
+        .light-box {
+            >div {
+                +div {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .invoice-note {
+        .text-md-end {
+            margin-top: 15px;
+        }
+    }
+
+    // map css
+    .jvector-map-height {
+        height: 150px;
+    }
+
+    // 404 css
+    .page-not-found {
+        .not-found-content {
+            p {
+                width: 96%;
+            }
+        }
+    }
+
+    // wizard css 
+    .property-wizard {
+        &.horizontal-wizard {
+            .wizard-box {
+                .wizard-step-container {
+                    .wizard-steps {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    label {
+        margin-bottom: 4px;
+    }
+
+    .label {
+        padding: 2px 10px 2px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .agent-lists {
+        margin-bottom: 20px;
+    }
+
+    .property-wizard {
+        .wizard-box {
+            .wizard-form-details {
+                form {
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &.horizontal-wizard {
+            .wizard-box {
+                .wizard-step-container {
+                    .log-in {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .authentication-box {
+        .log-in.row {
+            .form-login {
+                .card {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .report-summary {
+        .sales-details {
+            .chart-legends {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    // tap top css
+    .tap-top {
+        width: 30px;
+        height: 30px;
+    }
+
+    // main header css
+    .onhover-show-div {
+        top: 53px;
+    }
+
+    .page-header {
+        padding: 20px 0;
+
+        .breadcrumb {
+            float: left;
+            margin-top: 10px;
+        }
+    }
+
+    .page-wrapper {
+        .page-main-header {
+            height: 60px;
+
+            .header-menu {
+                .profile-avatar {
+                    img {
+                        width: 35px;
+                    }
+                }
+
+                >li {
+                    padding: 8px;
+
+
+                    svg {
+                        width: 18px;
+                    }
+
+
+                    .notification-badge {
+                        top: 4px;
+                        right: 1px;
+                        transform: scale(0.8);
+                    }
+                }
+
+                .notification-dropdown {
+                    top: 50px;
+                }
+            }
+        }
+    }
+
+    .page-body-wrapper {
+        .page-body {
+            min-height: calc(100vh - 60px);
+            margin-top: 60px;
+            padding: 0;
+        }
+    }
+
+    // dashboard css
+    .sales-details {
+        .chart-legends {
+            margin: 20px 0;
+        }
+    }
+
+    .monthly-sales {
+        margin-top: 30px;
+    }
+
+    .project-widgets {
+        .media {
+            .widget-icon {
+                width: 60px;
+                height: 60px;
+
+                i {
+                    font-size: 26px;
+                }
+            }
+
+            .media-body {
+                h4 {
+                    margin: 2px 0;
+                }
+
+                .label {
+                    padding: 2px 10px 1px;
+                }
+            }
+        }
+    }
+
+    .invoice-card {
+        .calculations {
+            ul {
+                li {
+                    h5 {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .properties-list {
+        .media {
+            .media-body {
+                ul {
+                    li {
+                        img {
+                            width: 20px;
+                        }
+                    }
+                }
+
+                h6 {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .sales-details {
+        .bar-sales {
+            margin-left: -20px;
+            margin-bottom: -25px;
+        }
+    }
+
+    .expiring-details {
+        .legend-exiring {
+            margin-top: 50px;
+        }
+    }
+
+    // login css
+    .log-in {
+        .divider {
+            margin: 10px 0;
+        }
+
+        form {
+            .form-group {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // property css
+    .switch {
+        height: 26px;
+        width: 54px;
+
+        .switch-state {
+            &:before {
+                width: 20px;
+                height: 20px;
+                bottom: 3px;
+            }
+        }
+
+        input {
+            &:checked {
+                +.switch-state {
+                    &:before {
+                        transform: translateX(27px);
+                    }
+                }
+            }
+        }
+    }
+
+    .listing-option {
+        display: block;
+
+        .d-flex {
+            margin-top: 10px;
+            justify-content: flex-start;
+        }
+    }
+
+    .property-section {
+        .property-box {
+            .property-image {
+                .overlay-plus {
+                    span {
+                        font-size: 38px;
+                    }
+                }
+            }
+        }
+    }
+
+    // user profile css
+    .about-profile {
+        .friend-list {
+            ul {
+                li {
+                    &:nth-child(n + 4) {
+                        margin-top: 20px;
+                    }
+
+                    .label {
+                        padding: 4px 8px 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 45%;
+        }
+    }
+
+    .user-info {
+        .media {
+            .media-body {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .agent-social {
+        li {
+            a {
+                width: 25px;
+                height: 25px;
+
+                i {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    // all users css
+    .property-grid-3 {
+        .property-grid {
+            &.list-view {
+                .property-box {
+                    .agent-image {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .property-grid {
+        &.list-view {
+            .property-box {
+                display: block;
+            }
+        }
+    }
+
+    // invoice css
+    .invoice {
+        .invoice-logo {
+            margin-bottom: 20px;
+        }
+    }
+
+    .invoice-table {
+        table {
+            tr {
+
+                th,
+                td {
+                    &:first-child {
+                        min-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .invoice-note {
+        img {
+            width: 110px;
+        }
+    }
+
+    // map css
+    .jvector-map-height,
+    .jvector-map-report {
+        height: 250px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .btn-social {
+        span {
+            padding: 8px 14px 7px;
+        }
+    }
+
+    .expiring-details {
+        .legend-exiring {
+            ul {
+                li {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .ratio_55 {
+        .bg-size {
+            &::before {
+                padding-top: 63%;
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 51%;
+        }
+    }
+
+    .time-details {
+        display: block;
+
+        h6 {
+            margin-top: 15px;
+        }
+    }
+
+    .user-info {
+        .all-properties {
+            .user-info-icon {
+                // li {
+                //     +li {
+                //         padding-top: 10px;
+                //         padding-left: 0;
+                //         border-left: none;
+                //     }
+                // }
+            }
+        }
+    }
+
+    // main header css
+    .page-wrapper {
+        .page-main-header {
+            .header-menu {
+                .onhover-show-div {
+                    width: calc(100vw - 30px);
+                    position: fixed;
+                    top: 60px;
+                    left: 15px;
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .notification-dropdown {
+                    width: calc(100vw - 30px);
+                }
+            }
+        }
+    }
+
+    // footer 
+    footer {
+        p {
+            font-size: 13px;
+        }
+    }
+
+    // 404 css
+    .page-not-found {
+        .not-found-content {
+            p {
+                width: 100%;
+            }
+        }
+
+        .not-found-img {
+            >img {
+                width: 100%;
+            }
+        }
+    }
+
+    .not-found-img {
+        .animation-error {
+            img {
+                height: 90px;
+            }
+        }
+    }
+
+    // wizard css
+    .property-wizard {
+        .wizard-box {
+            .wizard-step-container {
+                .wizard-steps {
+                    li {
+                        .media {
+                            .step-icon {
+                                width: 42px;
+                                height: 42px;
+
+                                svg {
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+
+    .not-found-img {
+        .animation-error {
+            img {
+                height: 60px;
+            }
+        }
+    }
+
+    // user profile css
+    .user-info {
+        .contact-media {
+            display: block;
+
+            .media-body {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .property-details {
+        ul {
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .property-section {
+        .property-box {
+            .property-image {
+                .overlay-property-box {
+                    .effect-round {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .property-details {
+                padding: 12px;
+            }
+        }
+    }
+
+    .not-found-img {
+        .animation-error {
+            right: 50px;
+
+            img {
+                height: 50px;
+            }
+        }
+    }
+
+    .timeline-card {
+        &::after {
+            width: 68%;
+        }
+    }
+
+    // dashboard css
+    .management-table {
+        table {
+            tr {
+                td {
+                    img {
+                        width: 34px;
+                    }
+
+                    .media {
+                        .media-body {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    &:first-child {
+                        min-width: 253px;
+                    }
+                }
+            }
+        }
+    }
+
+    .expiring-details {
+        .chart-detail {
+            .media {
+                .with-reload {
+                    >img {
+                        width: 35px;
+                    }
+
+                }
+            }
+        }
+
+        .legend-exiring {
+            ul {
+                li {
+                    width: auto;
+
+                    span {
+                        font-size: 13px;
+                    }
+
+                    +li {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .all-properties {
+        .media {
+            img {
+                width: 40px;
+            }
+
+            .media-body {
+                margin-left: 10px;
+
+                h4 {
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+
+    // reports css
+    .income-wrap {
+        .overview-content {
+            li {
+                display: block;
+
+                +li {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    // login css
+    .authentication-box {
+        .log-in {
+            form {
+                .d-flex {
+                    display: block !important;
+
+                    a {
+                        margin-top: 10px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-connect {
+        >div {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            +div {
+                margin-top: 10px !important;
+            }
+        }
+    }
+}
+
+@media print {
+
+    .page-sidebar,
+    .page-header {
+        display: none;
+    }
+
+    .page-wrapper {
+        .page-main-header {
+            display: none;
+            position: relative;
+        }
+    }
+
+    .page-body-wrapper {
+        .page-body {
+            margin-top: 0;
+        }
+    }
+
+    .customizer-links,
+    .tap-top {
+        display: none;
+        position: relative;
+    }
+}
+
+/**=====================
+     responsive css end
+==========================**/

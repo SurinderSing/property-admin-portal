@@ -1,0 +1,25 @@
+/**=====================
+     Card css start
+==========================**/
+.card {
+    border: none;
+    box-shadow: $common-box-shadow;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    .card-header {
+        background-color: transparent;
+        border-bottom: none;
+        h5 {
+            margin-bottom: 0;
+        }
+        .d-flex {
+            justify-content: space-between;
+        }
+    }
+    .card-body,.card-header, .card-footer {
+        padding: 30px;
+    }
+}
+/**=====================
+     card css end
+==========================**/

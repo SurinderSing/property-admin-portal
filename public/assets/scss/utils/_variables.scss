@@ -1,0 +1,67 @@
+
+:root {
+    --theme-default: #ff8c41;
+    --theme-default2: #f34451;
+    --theme-gradient1: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 51%, var(--theme-default) 100%);
+    --theme-gradient2: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 100%);
+    --theme-gradient3: linear-gradient(48deg, var(--theme-default) 0%, var(--theme-default2) 100%);
+    --theme-gradient4: linear-gradient(to right, var(--theme-default) 25%, var(--theme-default2) 100%);
+}
+
+// fonts
+$font_0: Montserrat;
+$font_1: Roboto;
+$font_2: Rubik;
+$font_3: sans-serif;
+$font-awesome: "Font Awesome 5 free";
+
+//colors
+$theme-font-color: #1c2d3a;
+$theme-main-font-color: rgba(59, 66, 73, 0.7);
+$theme-sub-font-color:#3b4249;
+$black: #000000;
+$white: #ffffff;
+$light-bg: #f8f8f8;
+$light-color: #959595;
+$light-border: #eee;
+$light-gray: #efefef;
+$light-blue: #f7f7fe;
+$blue-font: #647589;
+$gray-30: #d2d2d2;
+$gray-60: #878787;
+$dark-color: #202020;
+$dark-20: #141616;
+$darken-color: #151515;
+$common-box-shadow: 3.346px 3.716px 22.5px rgba($black, 0.07);
+
+$success-color: #89c826;
+$danger-color: #f13439;
+$label-red: #fb0118;
+$title-color: #586167;
+$brown-color: #232323;
+$sub-footer-dark: #1e1e1e;
+$footer-dark: #1b2c39;
+$warning-color: #ffcc33;
+// :root{
+//     --toastify-color-progress-success : $success-color;
+// }
+
+// social icon color
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb6;
+$google: #dd4b39;
+
+// payment card color
+$master: #1f4771;
+$visa: #6c6f69;
+$american: #73a3b9;
+
+
+// dark layout color
+$dark-bg: darken($brown-color, 3%);
+$dark-bg2: $brown-color;
+$dark-bg3: #282727;
+$dark-border-color: #383434;
+$gray-900 : gray;
+$border-color: #dee2e6;

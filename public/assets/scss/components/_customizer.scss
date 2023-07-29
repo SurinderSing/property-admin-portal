@@ -1,0 +1,183 @@
+/**=====================
+     customizer css start
+==========================**/
+.customizer-title{
+  ul{
+    padding: 15px;
+    background-color: $light-bg;
+    border-radius: 10px;
+  }
+  li{
+    padding-bottom: 5px;    
+    span{
+      font-size: 13px;
+      word-break: break-word;
+    }
+  }
+}
+.customizer-links {
+  position: fixed;
+  top: 50%;
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  @extend %flex-center;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+  svg {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $theme-sub-font-color;
+  }
+}
+
+.customizer-config {
+  position: fixed;
+  top: 43%;
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  @extend %flex-center;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+  svg {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $theme-sub-font-color;
+  }
+}
+
+.customizer-wrap {
+  direction: ltr;
+  .customizer-contain {
+    position: fixed;
+    height: 40vh;
+    top: 45%;
+    width: 260px;
+    overflow: auto;
+    right: -265px;
+    background-color: $white;
+    box-shadow: $common-box-shadow;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+    z-index: 7;
+    transition: all 0.3s ease;
+    color: $theme-font-color;
+    a {
+      color: $theme-sub-font-color;
+      svg {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    h6 {
+      position: relative;
+      font-weight: 600;
+      &::before {
+        @extend %comman-before-line;
+      }
+    }
+    .setting-back {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 1;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .option-setting {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      padding-left: 15px;
+      span {
+        font-family: $font_2, $font_3;
+      }
+      label {
+        margin: 0 10px 0;
+      }
+      .switch {
+        input {
+          &:checked {
+            + .switch-state {
+              background-color: $darken-color;
+            }
+          }
+        }
+      }
+      &.unlimited-color-layout {
+        margin: 17px -3px -3px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .btn {
+          padding: 5px 10px;
+          font-size: 12px;
+          margin-left: auto;
+        }
+        .form-group {
+          margin: 3px;
+        }
+        label {
+          display: none;
+        }
+        input[type="color"] {
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          border-color: $light-border;
+          background: transparent;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .layouts-settings {
+      + .layouts-settings {
+        padding-top: 20px;
+      }
+    }
+    &.mutliple-colors-setting {
+      height: 39vh;
+      .option-setting {
+        &.unlimited-color-layout {
+          input {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    .customizer-contain {
+      right: 0;
+      transition: all 0.3s ease;
+    }
+    .customizer-links {
+      right: 260px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/**=====================
+     customizer css end
+==========================**/

@@ -1,0 +1,142 @@
+/**=====================
+     labels css start
+==========================**/
+.property-overview{
+  .label-success {
+    background: transparent !important;
+    color: $success-color !important;
+    &::after{
+      background-color: $success-color !important;      
+    }
+  }
+}
+.label {
+  border-radius: 5px;
+  padding: 4px 15px 3px;
+  font-family: $font_1, $font_3;
+  font-weight: 500;
+  font-size: 14px;
+  color: $white;
+  display: inline-block;
+  text-transform: capitalize;
+
+  &.label-gradient {
+    background-image: var(--theme-gradient3);
+  }
+
+  &.label-solid {
+    background: var(--theme-default2);
+  }
+
+  &.label-success {
+    background: $success-color;   
+  }
+
+  &.label-danger {
+    background: $danger-color;
+  }
+
+  &.label-shadow {
+    background-color: $danger-color;
+    box-shadow: 0 0 9px 3px rgba($danger-color, 0.2);
+  }
+
+  &.label-light {
+    position: relative;
+    color: var(--theme-default);
+    &::after {
+      @extend %common-lightafter;
+      border-radius: 8px;
+      background-color: var(--theme-default);
+      opacity: 0.1;
+    }
+
+ 
+
+   
+
+    &.label-pill {
+      &::after {
+        border-radius: 9px;
+      }
+    }
+
+    &.label-flat {
+      &::after {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.label-white {
+    background-color: $white;
+    color: var(--theme-default2);
+    .gradient-1 {
+      @extend %gradient-text1;
+      background: var(--theme-gradient2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &.label-dark {
+    background: $theme-font-color;
+  }
+
+  &.label-pill {
+    border-radius: 9px;
+  }
+
+  &.label-flat {
+    border-radius: 0;
+  }
+
+  &.label-lg {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    padding: 10px 30px 9px;
+
+    &.label-pill {
+      border-radius: 23px;
+    }
+  }
+}
+
+.theme-label {
+  .card-header {
+    h5 {
+      margin-top: -3px;
+    }
+  }
+  .card-body {
+    margin-bottom: -15px;
+
+    .label {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.label-heart {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  @extend %flex-center;
+  position: relative;
+  color: var(--theme-default2);
+  i {
+    font-size: 14px;
+    margin: 0 0px -2px 0;
+  }
+  &::after {
+    border-radius: 100%;
+    @extend %common-lightafter;
+    opacity: 0.1;
+    background-color: var(--theme-default);
+  }
+
+}
+
+/**=====================
+     labels css end
+==========================**/

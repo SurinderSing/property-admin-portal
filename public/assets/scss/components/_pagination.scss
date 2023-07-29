@@ -1,0 +1,87 @@
+/**=====================
+     pagination css start
+==========================**/
+.theme-pagination {
+  margin-top: 30px;
+  text-align: right;
+  .pagination {
+    display: inline-block;
+    .page-item {
+      .page-link {
+        cursor: pointer;
+        color: var(--theme-default);
+        border-radius: 4px;
+        font-weight: 500;
+        padding: 6px 13px;
+        &:focus {
+          box-shadow: none;
+        }
+        &:hover,
+        &:focus {
+          background-color: var(--theme-default);
+          border-color: var(--theme-default);
+          color: $white;
+        }
+      }
+      &.active {
+        .page-link {
+          background-color: var(--theme-default);
+          border-color: var(--theme-default);
+          color: $white;
+          z-index: 1;
+        }
+      }
+      + .page-item {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+.pagination-tab {
+  &.nav-tabs {
+    margin-bottom: 0;
+    .nav-item {
+      .nav-link {
+        padding: 12px 20px;
+        color: var(--theme-default2);
+        border-radius: 5px;
+        font-weight: 700;
+        transition: 0.5s;
+        position: relative;
+        &::before {
+          display: none;
+        }
+        &::after {
+          @extend %common-lightafter;
+          opacity: 0.1;
+          background-color: var(--theme-default2);
+          transition: 0.5s;
+          border-radius: 5px;
+          z-index: -1;
+        }
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          &::after {
+            background-color: var(--theme-default2);
+          }
+        }
+        &.active {
+          color: $white !important;
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+      + .nav-item {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.slick-dots li button:before {
+  opacity: 1;
+}
+/**=====================
+     pagination css end
+==========================**/
