@@ -1,29 +1,40 @@
-import Link from 'next/link'
-import React from 'react'
-import { FileText, LogIn, User } from 'react-feather'
+import Link from "next/link";
+import React from "react";
+import { LogIn, User } from "react-feather";
+import { useDispatch } from "react-redux";
+import Request from "../../../request";
+import { toast } from "react-toastify";
 
 const UserProfile = () => {
-    return (
-        <li className="profile-avatar onhover-dropdown">
-            <div>
-                <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt='' />
-            </div>
-            <ul className="profile-dropdown onhover-show-div">
-                <li>
-                    <Link href='/manage-users/profile'>
-                        <span>Account </span>
-                        <User />
-                    </Link>
-                </li>
-                <li>
-                    <Link href='/authentication/login'>
-                        <span>Log in</span>
-                        <LogIn />
-                    </Link>
-                </li>
-            </ul>
-        </li>
-    )
-}
+  const dispatch = useDispatch();
+  const logoutFunc = async () => {
+    const { success, message } = await Request.logout();
+    if (success) {
+      dispatch({ type: "globalReducers/SET_VALID_USER", payload: false });
+      return toast.success(message || "Logged Out successfully!");
+    }
+    return toast.error(message || "Log Out failed!");
+  };
 
-export default UserProfile
+  return (
+    <li className="profile-avatar onhover-dropdown">
+      <div>
+        <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt="" />
+      </div>
+      <ul className="profile-dropdown onhover-show-div">
+        <li>
+          <Link href="/manage-users/profile">
+            <span>Account </span>
+            <User />
+          </Link>
+        </li>
+        <li onClick={logoutFunc}>
+          <span>Log Out</span>
+          <LogIn />
+        </li>
+      </ul>
+    </li>
+  );
+};
+
+export default UserProfile;

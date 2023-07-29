@@ -19,11 +19,12 @@ const Layout = ({ children }) => {
 
   const authFunc = () => {
     if (!ValidUser) {
-      router.push("/authentication/login");
-      return dispatch({
+      localStorage.clear();
+      dispatch({
         type: "globalReducers/SET_USER_TOKEN",
         payload: null,
       });
+      return router.push("/authentication/login");
     }
   };
 

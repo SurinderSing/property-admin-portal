@@ -1,11 +1,6 @@
 import axios from "axios";
 import { Apiurl } from "./settings";
-// import {
-//   fullBrowserVersion,
-//   browserName,
-//   osVersion,
-//   osName,
-// } from "react-device-detect";
+
 let authAxios = axios.create({
   baseURL: Apiurl,
 });
@@ -14,11 +9,6 @@ export const getToken = () => {
   return {
     headers: {
       Authorization: "Token " + localStorage.getItem("token"),
-      // type: "WEB",
-      // fullbrowserversion: fullBrowserVersion,
-      // browsername: browserName,
-      // osversion: osVersion,
-      // osname: osName,
     },
   };
 };
@@ -62,10 +52,40 @@ class Request {
     });
   }
 
+  //TODO: implement
   getUserData() {
     return new Promise((next, error) => {
       authAxios
         .post("/administrator/user/", {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  // Agents ::
+
+  addDealerApi(data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post("/api/dealer/create/", data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+  allDealerApi() {
+    return new Promise((next, error) => {
+      authAxios
+        .post("/api/compliance/dealers/", {}, getToken())
         .then((d) => {
           next(d.data);
         })

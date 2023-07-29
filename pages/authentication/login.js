@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Img from "../../components/Common/Image";
 import { useSelector, useDispatch } from "react-redux";
 import Request from "../../request";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const LogIn = () => {
@@ -36,7 +36,7 @@ const LogIn = () => {
         type: "globalReducers/SET_USER_TOKEN",
         payload: data.token,
       });
-      return toast.success(message || "Loged in successfully!");
+      return toast.success(message || "Logged In successfully!");
     }
     return toast.error(message || "Oops! Something went wrong.");
   };
