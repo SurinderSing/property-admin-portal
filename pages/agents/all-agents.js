@@ -13,10 +13,9 @@ const AllAgents = () => {
   const getAllDealers = async () => {
     const { data, success, message } = await Request.allDealerApi();
     if (success && data.length) {
-      setUserlist(data);
-      return toast.success(message || "Dealers Fetched Successfully!");
+      return setUserlist(data);
     }
-    return toast.error(message || "Oops! Something went wrong.");
+    return toast.error(message || "Oops! Something went wrong!");
   };
   return (
     <>

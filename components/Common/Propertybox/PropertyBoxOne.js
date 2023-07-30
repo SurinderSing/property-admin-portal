@@ -52,7 +52,7 @@ const PropertyBoxFour = ({ data, label }) => {
               <i className="fas fa-fax"></i> {data?.zipcode}
             </li>
           </ul>
-          <Link href="/manage-users/profile">
+          <Link href={`/agents/profile/${data?.user}`}>
             View profile <i className="fas fa-arrow-right"></i>
           </Link>
         </div>

@@ -67,28 +67,13 @@ export const SidebarMenuItem = [
     type: "sub",
     children: [
       {
-        path: "/agents/profile",
-        title: "Profile",
-        type: "link",
-      },
-      {
         path: "/agents/add-agent",
         title: "Add Agent",
         type: "link",
       },
       {
-        path: "/agents/edit-agent",
-        title: "Edit Agent",
-        type: "link",
-      },
-      {
         path: "/agents/all-agents",
         title: "All Agents",
-        type: "link",
-      },
-      {
-        path: "/agents/invoice",
-        title: "Invoice",
         type: "link",
       },
     ],

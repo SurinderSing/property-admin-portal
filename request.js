@@ -67,7 +67,7 @@ class Request {
     });
   }
 
-  // Agents ::
+  // Dealers ::
 
   addDealerApi(data) {
     return new Promise((next, error) => {
@@ -86,6 +86,47 @@ class Request {
     return new Promise((next, error) => {
       authAxios
         .post("/api/compliance/dealers/", {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  updateDealerApi(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/api/dealer/update/${id}/`, data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+  getDealerProfile(id) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/dealer/profile/${id}/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  deleteDealer(id) {
+    return new Promise((next, error) => {
+      authAxios
+        .delete(`/api/dealer/delete/${id}/`, getToken())
         .then((d) => {
           next(d.data);
         })
