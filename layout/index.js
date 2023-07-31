@@ -6,6 +6,7 @@ import Sidebar from "./sidebar";
 import TapToTop from "./TapToTop";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
+import Request from "../request";
 
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
@@ -24,6 +25,10 @@ const Layout = ({ children }) => {
         type: "globalReducers/SET_USER_TOKEN",
         payload: null,
       });
+      dispatch({
+        type: "globalReducers/SET_USER_DATA",
+        payload: null,
+      });
       return router.push("/authentication/login");
     }
   };
@@ -31,6 +36,20 @@ const Layout = ({ children }) => {
   useEffect(() => {
     authFunc();
   }, [ValidUser]);
+
+  useEffect(() => {
+    apiFunction();
+  }, []);
+
+  const apiFunction = async () => {
+    const { data, success } = await Request.getUserData();
+    if (success) {
+      return dispatch({
+        type: "globalReducers/SET_USER_DATA",
+        payload: data,
+      });
+    }
+  };
 
   const handleResize = () => {
     if (window.innerWidth > 991) {

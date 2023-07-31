@@ -12,7 +12,7 @@ const AllAgents = () => {
 
   const getAllDealers = async () => {
     const { data, success, message } = await Request.allDealerApi();
-    if (success && data.length) {
+    if (success) {
       return setUserlist(data);
     }
     return toast.error(message || "Oops! Something went wrong!");

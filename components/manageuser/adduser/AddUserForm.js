@@ -199,7 +199,7 @@ const AddUserForm = () => {
               <Button type="submit" className="btn btn-gradient btn-pill">
                 Submit
               </Button>
-              <Button className="btn btn-dashed btn-pill">Cancel</Button>
+              {/* <Button className="btn btn-dashed btn-pill">Cancel</Button> */}
             </Col>
           </div>
         </Form>

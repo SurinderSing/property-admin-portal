@@ -52,11 +52,10 @@ class Request {
     });
   }
 
-  //TODO: implement
   getUserData() {
     return new Promise((next, error) => {
       authAxios
-        .post("/administrator/user/", {}, getToken())
+        .post("api/compliance/user-info/", {}, getToken())
         .then((d) => {
           next(d.data);
         })
@@ -127,6 +126,20 @@ class Request {
     return new Promise((next, error) => {
       authAxios
         .delete(`/api/dealer/delete/${id}/`, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  updateDealerStatus(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/dealer/change-status/${id}/`, data, getToken())
         .then((d) => {
           next(d.data);
         })

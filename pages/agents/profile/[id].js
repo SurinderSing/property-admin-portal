@@ -45,6 +45,8 @@ const Profile = () => {
                 name={DataSource?.first_name + " " + DataSource?.last_name}
                 address={DataSource?.address}
                 id={DataSource?.user}
+                dealer_status={DataSource?.dealer_status}
+                buttons={true}
               />
               <Col xl="4 xl-6" md="6">
                 <About

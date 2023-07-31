@@ -41,8 +41,8 @@ const EditUserdataForm = ({ DataSource }) => {
           mobile: DataSource.mobile,
           dob: DataSource.dob,
           email: DataSource.email,
-          password: "",
-          password_confirm: "",
+          // password: "",
+          // password_confirm: "",
           description: DataSource.description,
           address: DataSource.address,
           zipcode: DataSource.zipcode,
@@ -54,8 +54,8 @@ const EditUserdataForm = ({ DataSource }) => {
           mobile: Yup.string(),
           dob: Yup.string(),
           email: Yup.string(),
-          password: Yup.string(),
-          password_confirm: Yup.string(),
+          // password: Yup.string(),
+          // password_confirm: Yup.string(),
           description: Yup.string(),
           address: Yup.string(),
           zipcode: Yup.string().min(6).max(6),
@@ -127,7 +127,7 @@ const EditUserdataForm = ({ DataSource }) => {
                   label="Email Address"
                 />
               </Col>
-              <Col sm="6" className="form-group">
+              {/* <Col sm="6" className="form-group">
                 <Field
                   name="password"
                   type="text"
@@ -146,7 +146,7 @@ const EditUserdataForm = ({ DataSource }) => {
                   placeholder="Enter Your Password"
                   label="Confirm Password"
                 />
-              </Col>
+              </Col> */}
               <Col sm="12" className="form-group">
                 <Field
                   type="textarea"
@@ -206,7 +206,6 @@ const EditUserdataForm = ({ DataSource }) => {
                 <Button type="submit" className="btn btn-gradient btn-pill">
                   Submit
                 </Button>
-                <Button className="btn btn-dashed btn-pill">Cancel</Button>
               </Col>
             </div>
           </Form>
