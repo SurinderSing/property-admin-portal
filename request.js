@@ -13,6 +13,15 @@ export const getToken = () => {
   };
 };
 
+export const uploadFile = () => {
+  return {
+    headers: {
+      "Content-Type": "multipart/form-data",
+      Authorization: "Token " + localStorage.getItem("token"),
+    },
+  };
+};
+
 class Request {
   error = (err) => {
     try {
@@ -140,6 +149,22 @@ class Request {
     return new Promise((next, error) => {
       authAxios
         .post(`api/dealer/change-status/${id}/`, data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  // Properties Api ::
+
+  createProperty(data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/create-property/`, data, uploadFile())
         .then((d) => {
           next(d.data);
         })
