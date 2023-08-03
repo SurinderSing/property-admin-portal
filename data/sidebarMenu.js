@@ -18,27 +18,27 @@ export const SidebarMenuItem = [
     path: "/dashboard",
   },
   {
-    title: "My Properies",
+    title: "Properies",
     icon: <Grid />,
     type: "sub",
     children: [
       {
-        path: "/myproperties/add-property",
+        path: "/properties/add-property",
         title: "Add Propery",
         type: "link",
       },
       {
-        path: "/myproperties/edit-property",
+        path: "/properties/edit-property",
         title: "Edit Propery",
         type: "link",
       },
       {
-        path: "/myproperties/propertylist",
+        path: "/properties/propertylist",
         title: "Property List",
         type: "link",
       },
       {
-        path: "/myproperties/favourites",
+        path: "/properties/favourites",
         title: "Favourites",
         type: "link",
       },

@@ -9,9 +9,12 @@ import {
 } from "../../utils/ReactStarpInputsValidation";
 import { toast } from "react-toastify";
 import Request from "../../../request";
+import { useRouter } from "next/router";
 
 const AddPropertyForm = () => {
+  const router = useRouter();
   const [AgentsArr, setAgentsArr] = useState([]);
+  let files = [];
   useEffect(() => {
     getAgentsListing();
   }, []);
@@ -32,13 +35,22 @@ const AddPropertyForm = () => {
   const createPropertyForm = async (propetyDetails) => {
     console.log(propetyDetails);
     const formData = new FormData();
+    // Append each image file to the FormData object
+    propetyDetails.photoUrl.forEach((file, index) => {
+      formData.append(`photoUrl${index + 1}`, file);
+    });
+
+    // Append other fields
     Object.keys(propetyDetails).forEach((key) => {
-      formData.append(key, propetyDetails[key]);
+      if (key !== "photoUrl") {
+        formData.append(key, propetyDetails[key]);
+      }
     });
 
     const { data, success, message } = await Request.createProperty(formData);
 
     if (success) {
+      router.push("/myproperties/propertylist");
       return toast.success(message || "Porperty created successfully");
     }
     return toast.error(message || "Oops! Something went wrong!");
@@ -73,9 +85,8 @@ const AddPropertyForm = () => {
         city: "",
         country: "",
         landmark: "",
-        photoUrl: null,
+        photoUrl: [],
         videoUrl: null,
-        // photoUrl: "",
         agent: 4,
       }}
       validationSchema={Yup.object().shape({
@@ -99,7 +110,7 @@ const AddPropertyForm = () => {
       onSubmit={(values) => {
         createPropertyForm(values);
       }}
-      render={({ setFieldValue }) => (
+      render={({ setFieldValue, values }) => (
         <Form>
           <Row className="gx-3">
             <Col sm="4" className="form-group">
@@ -111,11 +122,11 @@ const AddPropertyForm = () => {
                 label="Property Type"
                 inputprops={{
                   options: [
-                    { name: "Affordable", id: "affordable" },
-                    { name: "Re Sale", id: "re sale" },
-                    { name: "Luxury", id: "luxury" },
-                    { name: "Commercial", id: "commercial" },
-                    { name: "Residence", id: "residence" },
+                    { name: "Affordable", id: "Affordable" },
+                    { name: "Re Sale", id: "Re Sale" },
+                    { name: "Luxury", id: "Luxury" },
+                    { name: "Commercial", id: "Commercial" },
+                    { name: "Residence", id: "Residence" },
                   ],
                   defaultOption: "Property Type",
                 }}
@@ -129,8 +140,8 @@ const AddPropertyForm = () => {
                 label="Property Status"
                 inputprops={{
                   options: [
-                    { name: "On Going", id: "on going" },
-                    { name: "Ready to Move", id: "ready to move" },
+                    { name: "On Going", id: "On Going" },
+                    { name: "Ready to Move", id: "Ready to Move" },
                   ],
                   defaultOption: "Property Status",
                 }}
@@ -144,12 +155,12 @@ const AddPropertyForm = () => {
                 label="Property Mode"
                 inputprops={{
                   options: [
-                    { id: "new launched", name: "New launched" },
+                    { id: "New Launched", name: "New Launched" },
                     {
-                      id: "under construction",
-                      name: "Under construction",
+                      id: "Under Construction",
+                      name: "Under Construction",
                     },
-                    { id: "launched", name: "Launched" },
+                    { id: "Launched", name: "Launched" },
                   ],
                   defaultOption: "Property Mode",
                 }}
@@ -296,15 +307,25 @@ const AddPropertyForm = () => {
                 <i className="fas fa-cloud-upload-alt" />
                 <label>Images</label>
                 <Dropzone
-                  inputContent="Drop A File"
-                  onChangeStatus={(file, status) => {
+                  inputContent="Drop Images"
+                  onChangeStatus={({ file }, status) => {
                     if (status === "done") {
-                      setFieldValue("photoUrl", file.file);
+                      files = [...files, file];
+                      setFieldValue("photoUrl", files);
+                    }
+                    if (status === "removed") {
+                      const updatedPhotoUrl = values.photoUrl.filter(
+                        (value) => {
+                          return value.name !== file.name;
+                        }
+                      );
+                      setFieldValue("photoUrl", updatedPhotoUrl);
                     }
                   }}
-                  maxFiles={4}
+                  maxFiles={6}
                   multiple={true}
                   canCancel={false}
+                  canRemove={true}
                   accept="image/*"
                   styles={{
                     dropzoneActive: { borderColor: "green" },
@@ -313,9 +334,12 @@ const AddPropertyForm = () => {
                 <label>Video</label>
                 <Dropzone
                   inputContent="Drop A File"
-                  onChangeStatus={(file, status) => {
+                  onChangeStatus={({ file }, status) => {
                     if (status === "done") {
-                      setFieldValue("videoUrl", file.file);
+                      setFieldValue("videoUrl", file);
+                    }
+                    if (status === "removed") {
+                      setFieldValue("videoUrl", null);
                     }
                   }}
                   maxFiles={1}

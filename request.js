@@ -161,6 +161,19 @@ class Request {
 
   // Properties Api ::
 
+  AllProperties() {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/property/fetch/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
   createProperty(data) {
     return new Promise((next, error) => {
       authAxios
