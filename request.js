@@ -174,6 +174,19 @@ class Request {
         });
     });
   }
+  propertyDetails(id) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/property/${id}/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
   createProperty(data) {
     return new Promise((next, error) => {
       authAxios
@@ -187,6 +200,68 @@ class Request {
         });
     });
   }
+
+  updateProperty(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/property/update/${id}/`, data, uploadFile())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  updatePropertyStatus(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`property/desable/${id}/`, data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  deleteProperty(id) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`property/delete/${id}/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  // User API :: 
+
+  AllUserDetails() {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`/api/compliance/normlausers/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+  
+
+  //
+  //
 }
 
 export default new Request();

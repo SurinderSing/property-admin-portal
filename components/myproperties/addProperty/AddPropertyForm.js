@@ -67,6 +67,7 @@ const AddPropertyForm = () => {
         num_of_bathrooms: "",
         num_of_bedrooms: "",
         area: "",
+        description: "",
         emergencyexit: false,
         cctv: false,
         freewifi: false,
@@ -87,7 +88,8 @@ const AddPropertyForm = () => {
         landmark: "",
         photoUrl: [],
         videoUrl: null,
-        agent: 4,
+        agent: "",
+        active_property: "true",
       }}
       validationSchema={Yup.object().shape({
         property_type: Yup.string().required(),
