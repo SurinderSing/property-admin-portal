@@ -39,11 +39,11 @@ export const SidebarMenuItem = [
     icon: <Users />,
     type: "sub",
     children: [
-      {
-        path: "/manage-users/profile",
-        title: "Profile",
-        type: "link",
-      },
+      // {
+      //   path: "/manage-users/profile",
+      //   title: "Profile",
+      //   type: "link",
+      // },
       {
         path: "/manage-users/allusers",
         title: "All Users",

@@ -33,7 +33,11 @@ const AllUsers = () => {
                   userlist.map((item, i) => {
                     return (
                       <Col md="12" xl="6" key={i}>
-                        <UserDetailsBox data={item} label={false} />
+                        <UserDetailsBox
+                          data={item}
+                          getAllUsersDetails={getAllUsersDetails}
+                          label={false}
+                        />
                       </Col>
                     );
                   })}

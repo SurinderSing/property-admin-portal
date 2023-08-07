@@ -30,7 +30,6 @@ const EditPropertyForm = ({ DataSource }) => {
     DataSource?.videoUrl && setVideoUrl(DataSource?.videoUrl);
   }, [DataSource]);
 
-  console.log(FilteredImgs);
   useEffect(() => {
     getAgentsListing();
   }, []);
@@ -49,8 +48,11 @@ const EditPropertyForm = ({ DataSource }) => {
   };
 
   const UpdatePropertyForm = async (propetyDetails) => {
-    console.log(propetyDetails);
     const formData = new FormData();
+
+    // Append PhotoUrl ::
+    FilteredImgs.length > 0 && formData.append(`photoUrl`, FilteredImgs);
+
     // Append each image file to the FormData object
     propetyDetails.photoUrl.forEach((file, index) => {
       formData.append(`photoUrl${index + 1}`, file);
@@ -107,7 +109,7 @@ const EditPropertyForm = ({ DataSource }) => {
           country: DataSource?.country,
           landmark: DataSource?.landmark,
           photoUrl: [],
-          videoUrl: null,
+          videoUrl: DataSource?.videoUrl,
           agent: DataSource?.agent,
         }}
         validationSchema={Yup.object().shape({

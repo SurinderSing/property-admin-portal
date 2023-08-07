@@ -6,7 +6,7 @@ import Listview from '../../components/myproperties/PropertyList/Listview'
 const Propertylist = () => {
   return (
     <>
-      <Breadcrumb title='Property list' titleText='Welcome to admin panel' parent='My properties' />
+      <Breadcrumb title='Property list' parent='Properties' />
       <Container fluid={true}>
         <Row>
           <Col lg='12'>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { Button, Card, CardBody, Col, Media, Input, Label } from "reactstrap";
+import { Card, CardBody, Col, Media, Input, Label } from "reactstrap";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Request from "../../../request";
@@ -11,9 +11,15 @@ const ProfileDetail = ({ name, address, id, dealer_status, buttons }) => {
     const { success, message } = await Request.deleteDealer(id);
     if (success) {
       router.push("/agents/all-agents");
-      return toast.success(message || "Dealer deleted successfully!");
+      return toast.success(
+        message ||
+          err?.response?.data?.message ||
+          "Dealer deleted successfully!"
+      );
     }
-    return toast.error(message || "Oops! Something went wrong!");
+    return toast.error(
+      message || err?.response?.data?.message || "Oops! Something went wrong!"
+    );
   };
 
   const updateDealerStatus = async (status) => {

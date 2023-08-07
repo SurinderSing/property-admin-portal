@@ -243,7 +243,7 @@ class Request {
     });
   }
 
-  // User API :: 
+  // User API ::
 
   AllUserDetails() {
     return new Promise((next, error) => {
@@ -258,7 +258,34 @@ class Request {
         });
     });
   }
-  
+
+  setUserStatus(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/user/block-unblock/${id}/`, data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  deleteUser(id) {
+    return new Promise((next, error) => {
+      authAxios
+        .delete(`/api/users/delete/${id}/`, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
 
   //
   //
