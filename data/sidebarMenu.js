@@ -1,14 +1,4 @@
-import {
-  Airplay,
-  BarChart,
-  CreditCard,
-  Grid,
-  Layout,
-  Lock,
-  MapPin,
-  UserPlus,
-  Users,
-} from "react-feather";
+import { Airplay, Grid, UserPlus, Users, MessageCircle } from "react-feather";
 
 export const SidebarMenuItem = [
   {
@@ -67,5 +57,12 @@ export const SidebarMenuItem = [
         type: "link",
       },
     ],
+  },
+
+  {
+    title: "Messages",
+    icon: <MessageCircle />,
+    type: "link",
+    path: "/messages",
   },
 ];

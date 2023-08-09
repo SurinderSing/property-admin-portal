@@ -13,7 +13,7 @@ const AllUsers = () => {
 
   const getAllUsersDetails = async () => {
     const { data, success, message } = await Request.AllUserDetails();
-    if (success && data.length > 0) {
+    if (success && data) {
       setUserlist(data);
       return;
     }
@@ -29,18 +29,19 @@ const AllUsers = () => {
           <Col lg="12">
             <div className="property-grid-3 agent-grids ratio2_3">
               <Row className="property-2 column-sm property-label property-grid list-view">
-                {userlist &&
-                  userlist.map((item, i) => {
-                    return (
-                      <Col md="12" xl="6" key={i}>
-                        <UserDetailsBox
-                          data={item}
-                          getAllUsersDetails={getAllUsersDetails}
-                          label={false}
-                        />
-                      </Col>
-                    );
-                  })}
+                {userlist.length > 0
+                  ? userlist.map((item, i) => {
+                      return (
+                        <Col md="12" xl="6" key={i}>
+                          <UserDetailsBox
+                            data={item}
+                            getAllUsersDetails={getAllUsersDetails}
+                            label={false}
+                          />
+                        </Col>
+                      );
+                    })
+                  : "No Users Available !"}
               </Row>
             </div>
           </Col>

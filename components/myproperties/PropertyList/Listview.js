@@ -29,14 +29,15 @@ const Listview = () => {
   return (
     <div className="col-xl-12">
       <Row className="property-2 column-sm property-label property-grid">
-        {DataSourse &&
-          DataSourse.map((item, i) => {
-            return (
-              <Col xl="4" md="6 xl-6" key={i}>
-                <PropertyBox data={item} />
-              </Col>
-            );
-          })}
+        {DataSourse.length > 0
+          ? DataSourse.map((item, i) => {
+              return (
+                <Col xl="4" md="6 xl-6" key={i}>
+                  <PropertyBox data={item} />
+                </Col>
+              );
+            })
+          : "No Properties Available !"}
       </Row>
       <Pagination />
     </div>

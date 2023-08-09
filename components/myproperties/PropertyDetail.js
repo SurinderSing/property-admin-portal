@@ -4,6 +4,7 @@ import { Card, CardBody, Col, Media, Input, Label } from "reactstrap";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Request from "../../request";
+import { Info } from "react-feather";
 const PropertyDetail = ({ DataSource }) => {
   const router = useRouter();
   const [PropertyActive, setPropertyActive] = useState(null);
@@ -47,6 +48,9 @@ const PropertyDetail = ({ DataSource }) => {
               </span>
               <br />
               <span className="light-font">{`${DataSource?.country}`}</span>
+              <div style={{ fontSize: 15, marginTop: 20 }}>
+                <Info size={15} /> {DataSource?.description}
+              </div>
             </Media>
             <div className="d-flex">
               <Label className="switch">
@@ -66,7 +70,12 @@ const PropertyDetail = ({ DataSource }) => {
             </div>
           </Media>
 
-          <div className="contact-btn">
+          <div
+            className="contact-btn"
+            style={{
+              marginLeft: 20,
+            }}
+          >
             <Link
               href={`/properties/update/${DataSource?.id}`}
               className="btn btn-gradient btn-pill"

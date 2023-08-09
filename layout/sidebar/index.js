@@ -44,7 +44,7 @@ const Sidebar = ({ toggle, setToggle }) => {
               />
             </div>
             <Media body className="media-body">
-              <Link href="/manage-users/profile">
+              <Link href="/dashboard">
                 <h6>
                   {userData?.first_name
                     ? userData?.first_name + " " + userData?.last_name

@@ -22,9 +22,7 @@ const PropertyBoxFour = ({ data, label }) => {
                 </div> */}
         <div className="agent-content">
           <h3>
-            <Link href="/pages/agency/agency-profile">
-              {data?.first_name} {data?.last_name}
-            </Link>
+            {data?.first_name} {data?.last_name}
           </h3>
           <p className="font-roboto">Real estate Agent</p>
           <ul className="agent-contact">

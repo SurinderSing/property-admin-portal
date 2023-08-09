@@ -287,6 +287,22 @@ class Request {
     });
   }
 
+  //Messages ::
+
+  allMessagesApi() {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/compliance/contactUsdata/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
   //
   //
 }
