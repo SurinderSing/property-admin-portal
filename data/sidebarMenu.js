@@ -22,6 +22,16 @@ export const SidebarMenuItem = [
         title: "Property List",
         type: "link",
       },
+      {
+        path: "/properties/selectlatestproperty",
+        title: "Latest Propery",
+        type: "link",
+      },
+      {
+        path: "/properties/latestpropertyforsale",
+        title: "Latest Property For Sale",
+        type: "link",
+      },
     ],
   },
   {

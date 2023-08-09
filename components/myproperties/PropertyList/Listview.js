@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "reactstrap";
 import PropertyBox from "../../Common/Propertybox/PropertyBox";
 import { getData } from "../../utils/getData";
-import usePagination from "../../utils/usePagination";
 import { toast } from "react-toastify";
 import Request from "../../../request";
 import { useRouter } from "next/router";
@@ -25,7 +24,6 @@ const Listview = () => {
     return;
   };
 
-  const [Pagination, data] = usePagination(DataSourse && DataSourse);
   return (
     <div className="col-xl-12">
       <Row className="property-2 column-sm property-label property-grid">
@@ -39,7 +37,6 @@ const Listview = () => {
             })
           : "No Properties Available !"}
       </Row>
-      <Pagination />
     </div>
   );
 };
