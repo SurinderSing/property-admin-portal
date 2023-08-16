@@ -27,7 +27,7 @@ const Listview = () => {
       FilterData
     );
 
-    if (success && data.length > 0) {
+    if (success) {
       setDataSourse(data);
       setTotalPagesSize(total);
       return;
@@ -35,8 +35,6 @@ const Listview = () => {
     toast.error(message || "Oops! Something went wrong!");
     return;
   };
-
-  console.log(DataSourse || "Oops! Something went wrong!");
 
   return (
     <div className="col-xl-12">

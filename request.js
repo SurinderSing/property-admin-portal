@@ -174,6 +174,7 @@ class Request {
         });
     });
   }
+
   propertyDetails(id) {
     return new Promise((next, error) => {
       authAxios
@@ -233,6 +234,34 @@ class Request {
     return new Promise((next, error) => {
       authAxios
         .post(`property/delete/${id}/`, {}, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  LatestProperty(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/Compliance/property/LatestProperty/${id}/`, data, getToken())
+        .then((d) => {
+          next(d.data);
+        })
+        .catch((err) => {
+          next({ error: true, err });
+          this.error(err);
+        });
+    });
+  }
+
+  LatestPropertyForSale(id, data) {
+    return new Promise((next, error) => {
+      authAxios
+        .post(`api/Compliance/property/LatestForSale/${id}/`, data, getToken())
         .then((d) => {
           next(d.data);
         })

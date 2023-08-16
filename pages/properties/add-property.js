@@ -6,7 +6,7 @@ import AddPropertyForm from '../../components/myproperties/addProperty/AddProper
 const AddProperty = () => {
     return (
         <>
-            <Breadcrumb title='Add Property' titleText='Welcome to admin panel' parent='My Properties' />
+            <Breadcrumb title='Add Property' parent='Properties' />
             <Container fluid={true} className="container-fluid">
                 <Row>
                     <Col lg='12'>

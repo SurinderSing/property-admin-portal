@@ -21,3 +21,25 @@
   color: #fff;
   border: 1px solid var(--theme-default2);
 }
+
+:where(.css-dev-only-do-not-override-byeoj0).ant-pagination
+  .ant-pagination-item-active {
+  border-color: var(--theme-default2);
+}
+:where(.css-dev-only-do-not-override-byeoj0).ant-pagination
+  .ant-pagination-item-active:hover {
+  border-color: var(--theme-default2);
+  color: #fff;
+  background: var(--theme-default2);
+}
+:where(.css-dev-only-do-not-override-byeoj0).ant-pagination
+  .ant-pagination-item
+  a {
+  transition: none;
+}
+:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
+:where(.css-dev-only-do-not-override-byeoj0).ant-switch.ant-switch-checked {
+  background: var(--theme-default2);
+}
