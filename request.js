@@ -90,10 +90,10 @@ class Request {
         });
     });
   }
-  allDealerApi() {
+  allDealerApi(FilterData) {
     return new Promise((next, error) => {
       authAxios
-        .post("/api/compliance/dealers/", {}, getToken())
+        .post("/api/compliance/dealers/", FilterData, getToken())
         .then((d) => {
           next(d.data);
         })
@@ -161,10 +161,10 @@ class Request {
 
   // Properties Api ::
 
-  AllProperties() {
+  AllProperties(filter) {
     return new Promise((next, error) => {
       authAxios
-        .post(`/property/fetch/`, {}, getToken())
+        .post(`/property/fetch/`, filter, getToken())
         .then((d) => {
           next(d.data);
         })
@@ -245,10 +245,10 @@ class Request {
 
   // User API ::
 
-  AllUserDetails() {
+  AllUserDetails(filter) {
     return new Promise((next, error) => {
       authAxios
-        .post(`/api/compliance/normlausers/`, {}, getToken())
+        .post(`/api/compliance/normlausers/`, filter, getToken())
         .then((d) => {
           next(d.data);
         })
@@ -289,10 +289,10 @@ class Request {
 
   //Messages ::
 
-  allMessagesApi() {
+  allMessagesApi(filter) {
     return new Promise((next, error) => {
       authAxios
-        .post(`api/compliance/contactUsdata/`, {}, getToken())
+        .post(`api/compliance/contactUsdata/`, filter, getToken())
         .then((d) => {
           next(d.data);
         })

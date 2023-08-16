@@ -4,6 +4,7 @@ import { ChevronsLeft } from "react-feather";
 import { Media } from "reactstrap";
 import SidebarMenu from "./SidebarMenu";
 import { useSelector } from "react-redux";
+import { User } from "react-feather";
 
 const Sidebar = ({ toggle, setToggle }) => {
   const { userData } = useSelector((state) => ({
@@ -36,12 +37,16 @@ const Sidebar = ({ toggle, setToggle }) => {
       <div className="main-sidebar">
         <div className="user-profile">
           <Media className="media">
-            <div className="change-pic">
-              <img
-                src="/assets/images/avatar/3.jpg"
-                className="img-fluid"
-                alt=""
-              />
+            <div
+              className="change-pic"
+              style={{
+                border: "4px solid var(--theme-default2)",
+                borderRadius: "20px",
+                padding: "8px",
+                margin: "0 .5em",
+              }}
+            >
+              <User size={32} color="var(--theme-default2)" />
             </div>
             <Media body className="media-body">
               <Link href="/dashboard">

@@ -4,16 +4,26 @@ import Breadcrumb from "../../components/Common/Breadcrumb";
 import UserDetailsBox from "../../components/Common/Propertybox/UserDetailsBox";
 import Request from "../../request";
 import { toast } from "react-toastify";
+import ReactPaginate from "react-paginate";
 
 const AllUsers = () => {
   const [userlist, setUserlist] = useState([]);
+  const [TotalPagesSIze, setTotalPagesSize] = useState(1);
+  const [FilterData, setFilterData] = useState({
+    page: 1,
+  });
+  const handlePageClick = ({ selected }) => {
+    setFilterData({ page: selected + 1 });
+  };
+
   useEffect(() => {
     getAllUsersDetails();
-  }, []);
+  }, [FilterData]);
 
   const getAllUsersDetails = async () => {
-    const { data, success, message } = await Request.AllUserDetails();
+    const { data, success, message, total } = await Request.AllUserDetails(FilterData);
     if (success && data) {
+      setTotalPagesSize(total);
       setUserlist(data);
       return;
     }
@@ -46,6 +56,16 @@ const AllUsers = () => {
             </div>
           </Col>
         </Row>
+        <div>
+            <ReactPaginate
+              previousLabel={"Previous"}
+              nextLabel={"Next"}
+              pageCount={Math.ceil(TotalPagesSIze / 10)}
+              onPageChange={handlePageClick}
+              containerClassName={"pagination"}
+              activeClassName={"active"}
+            />
+          </div>
       </Container>
     </>
   );

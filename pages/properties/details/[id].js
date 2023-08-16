@@ -3,7 +3,8 @@ import { Col, Container, Row } from "reactstrap";
 import PropertyDetail from "../../../components/myproperties/PropertyDetail";
 import Breadcrumb from "../../../components/Common/Breadcrumb";
 import PropertyAbout from "../../../components/myproperties/propertyAbout/About";
-import PropertyImgBox from "../../../components/Common/Propertybox/propertyImgBox";
+import PropertyImgBox from "../../../components/Common/Propertybox/PropertyImgBox";
+import PropertyVideoBox from "../../../components/Common/Propertybox/PropertyVideoBox";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Request from "../../../request";
@@ -27,16 +28,15 @@ const Details = () => {
 
   return (
     <>
-      <Breadcrumb
-        title="Property Details"
-        // titleText="Welcome to admin panel"
-        parent="Properties"
-      />
+      <Breadcrumb title="Property Details" parent="Properties" />
       <Container fluid={true}>
         <Row>
           <Col lg="12">
             <Row className="user-info">
               <PropertyDetail DataSource={DataSource} />
+              <Col xl="4 xl-6" md="6">
+                <PropertyVideoBox video={DataSource?.videoUrl} />
+              </Col>
               <Col xl="4 xl-6" md="6">
                 <PropertyImgBox data={DataSource} />
               </Col>

@@ -3,19 +3,17 @@ import { Card, CardBody } from "reactstrap";
 import ImageSlider from "../../myproperties/ImageSlider";
 import { Camera } from "react-feather";
 
-const PropertyImgBox = ({ data }) => {
+const PropertyImgBox = ({ video }) => {
   return (
     <Card>
       <CardBody>
         <div className="title-about">
-          <h5>Images</h5>
+          <h5>Video</h5>
         </div>
-        <div className="property-image">
-          <div className="seen-data">
-            <Camera />
-            <span style={{ marginLeft: 5 }}>{data?.photoUrl?.length || 5}</span>
-          </div>
-          <ImageSlider images={data?.photoUrl} />
+        <div>
+          <video src={video} controls width="100%" height="100%">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </CardBody>
     </Card>

@@ -18,8 +18,16 @@ const UserProfile = () => {
 
   return (
     <li className="profile-avatar onhover-dropdown">
-      <div>
-        <img src="/assets/images/avatar/3.jpg" className="img-fluid" alt="" />
+      <div
+        className="change-pic"
+        style={{
+          border: "1px solid var(--theme-default2)",
+          borderRadius: "50px",
+          padding: "8px",
+          margin: "0 .5em",
+        }}
+      >
+        <User size={20} color="var(--theme-default2)" />
       </div>
       <ul className="profile-dropdown onhover-show-div">
         <li>

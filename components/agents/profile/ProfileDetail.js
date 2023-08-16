@@ -4,6 +4,7 @@ import { Card, CardBody, Col, Media, Input, Label } from "reactstrap";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Request from "../../../request";
+import { User } from "react-feather";
 const ProfileDetail = ({ name, address, id, dealer_status, buttons }) => {
   const router = useRouter();
   const [DealerActive, setDealerActive] = useState(null);
@@ -38,11 +39,15 @@ const ProfileDetail = ({ name, address, id, dealer_status, buttons }) => {
       <Card>
         <CardBody>
           <Media className="contact-media">
-            <img
-              src="/assets/images/avatar/5.jpg"
-              className="img-fluid img-80"
-              alt=""
-            />
+            <div
+              style={{
+                border: "4px solid var(--theme-default2)",
+                borderRadius: "50px",
+                padding: "10px",
+              }}
+            >
+              <User size={42} color="var(--theme-default2)" />
+            </div>
             <Media body>
               <h4>{name}</h4>
               <span className="light-font">

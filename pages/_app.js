@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "../store/index";
+import "./styles.css"
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
