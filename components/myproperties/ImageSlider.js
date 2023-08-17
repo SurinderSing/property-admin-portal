@@ -22,10 +22,10 @@ const ImageSlider = ({ images }) => {
               src={data}
               alt="Properties Image"
               style={{
-                width: "100% !important",
-                height: "20rem",
                 objectFit: "contain",
                 aspectRatio: "3/2",
+                marginInline: "auto",
+                width: "100%",
               }}
             ></img>
           </div>
